@@ -1,27 +1,27 @@
-import { Container } from "../../components/Container/Container";
-import { Txt } from "../../components/Txt/Txt";
+import { Container } from "../../components/Container/Container.jsx";
+import { Txt } from "../../components/Txt/Txt.jsx";
+import { s } from "./Forecast.style.js";
+import { useRoute, useNavigation } from "@react-navigation/native";
 import { TouchableOpacity, View } from "react-native";
-import { s } from "./Forecast.style";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import { ForecastListItem } from "../../components/ForecastListItem/ForecastListItem";
-import { getWeatherInterpretation } from "../../services/meteo-service";
-import { dateToDDMM, DAYS } from "../../services/date-service";
+import { ForecastListItem } from "../../components/ForecastListItem/ForecastListItem.jsx";
+import { getWeatherInterpretation } from "../../services/meteo-service.js";
+import { dateToDDMM, DAYS } from "../../services/date-service.js";
+
 export function Forecast({}) {
   const { params } = useRoute();
-  const { nav } = useNavigation();
+  const nav = useNavigation();
 
   const backButton = (
     <TouchableOpacity style={s.back_btn} onPress={() => nav.goBack()}>
-      <Txt>{"<"}</Txt>
+      <Txt> {"<"} </Txt>
     </TouchableOpacity>
   );
-
   const header = (
     <View style={s.header}>
       {backButton}
       <View style={s.header_texts}>
         <Txt>{params.city}</Txt>
-        <Txt style={s.subtitle}>Prévision sur 7 jours</Txt>
+        <Txt style={s.subtitle}>Prévisions sur 7 jours</Txt>
       </View>
     </View>
   );
@@ -46,7 +46,6 @@ export function Forecast({}) {
       })}
     </View>
   );
-
   return (
     <Container>
       {header}
