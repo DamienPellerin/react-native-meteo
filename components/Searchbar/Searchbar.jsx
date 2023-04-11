@@ -1,5 +1,5 @@
 import { TextInput } from "react-native";
-import { s } from "./Searchbar.style.js";
+import { s } from "./Searchbar.style";
 
 export function Searchbar({ onSubmit }) {
   return (
