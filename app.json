@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/app-splash-meteo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#13E7DE"
     },
     "assetBundlePatterns": [
       "**/*"
