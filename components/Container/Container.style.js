@@ -10,7 +10,7 @@ const s = StyleSheet.create({
     padding: 20,
   },
   img: {
-    opacity: 0.85,
+    opacity: 0.9,
   },
 });
 
